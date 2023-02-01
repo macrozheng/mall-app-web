@@ -17,7 +17,7 @@
 				<text class="price-tip">¥</text>
 				<text class="price">{{product.price}}</text>
 				<text class="m-price">¥{{product.originalPrice}}</text>
-				<text class="coupon-tip">7折</text>
+				<!-- <text class="coupon-tip">7折</text> -->
 			</view>
 			<view class="bot-row">
 				<text>销量: {{product.sale}}</text>

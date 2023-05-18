@@ -19,13 +19,19 @@
 
 项目在线演示地址：[http://www.macrozheng.com/app/](http://www.macrozheng.com/app/)  
 
-![](../images/mall_app_web_preview_01.png)![](../images/mall_app_web_preview_02.png)
+### 效果展示
 
-![](../images/mall_app_web_preview_03.png)![](../images/mall_app_web_preview_04.png)
+![](./images/mall_app_web_preview_01.png)![](./images/mall_app_web_preview_02.png)
 
-![](../images/mall_app_web_preview_05.png)![](../images/mall_app_web_preview_06.png)
+![](./images/mall_app_web_preview_03.png)![](./images/mall_app_web_preview_04.png)
 
-![](../images/mall_app_web_preview_07.png)![](../images/mall_app_web_preview_08.png)
+![](./images/mall_app_web_preview_05.png)![](./images/mall_app_web_preview_06.png)
+
+![](./images/mall_app_web_preview_07.png)![](./images/mall_app_web_preview_08.png)
+
+![](./images/mall_app_web_preview_09.png)![](./images/mall_app_web_preview_10.png)
+
+
 
 ### 技术选型
 
@@ -86,4 +92,4 @@ src -- 源码目录
 
 [Apache License 2.0](https://github.com/macrozheng/mall/blob/master/LICENSE)
 
-Copyright (c) 2020-2021 macrozheng
+Copyright (c) 2020-2023 macrozheng

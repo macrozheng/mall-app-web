@@ -21,7 +21,8 @@
 				</view>
 			</view>
 			<button class="confirm-btn" @click="toLogin" :disabled="logining">登录</button>
-			<view class="forget-section">
+			<button class="confirm-btn2" @click="toRegist" >获取体验账号</button>
+			<view class="forget-section" @click="toRegist">
 				忘记密码?
 			</view>
 		</view>
@@ -57,7 +58,7 @@
 				uni.navigateBack();
 			},
 			toRegist() {
-				this.$api.msg('去注册');
+				uni.navigateTo({url:'/pages/public/register'});
 			},
 			async toLogin() {
 				this.logining = true;
@@ -212,6 +213,21 @@
 		color: #fff;
 		font-size: $font-lg;
 
+		&:after {
+			border-radius: 100px;
+		}
+	}
+	
+	.confirm-btn2 {
+		width: 630upx;
+		height: 76upx;
+		line-height: 76upx;
+		border-radius: 50px;
+		margin-top: 40upx;
+		background: $uni-color-primary;
+		color: #fff;
+		font-size: $font-lg;
+	
 		&:after {
 			border-radius: 100px;
 		}

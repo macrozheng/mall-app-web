@@ -12,12 +12,16 @@
 			<text class="tit">邮政编码</text>
 			<input class="input" type="number" v-model="addressData.postCode" placeholder="收货人邮政编码" placeholder-class="placeholder" />
 		</view>
-		<view class="row b-b">
+<!-- 		<view class="row b-b">
 			<text class="tit">所在区域</text>
 			<text @click="chooseLocation" class="input">
 				{{addressData.province}} {{addressData.city}} {{addressData.region}}
 			</text>
 			<text class="yticon icon-shouhuodizhi" @click="chooseLocation"></text>
+		</view> -->
+		<view class="row b-b">
+			<text class="tit">所在区域</text>
+			<input class="input" type="text" v-model="addressData.prefixAddress" placeholder="所在区域" placeholder-class="placeholder" />
 		</view>
 		<view class="row b-b">
 			<text class="tit">详细地址</text>
@@ -49,7 +53,8 @@
 					default: false,
 					province: '',
 					city: '',
-					region: ''
+					region: '',
+					prefixAddress: ''
 				}
 			}
 		},
@@ -59,6 +64,7 @@
 				title = '编辑收货地址'
 				fetchAddressDetail(option.id).then(response=>{
 					this.addressData = response.data;
+					this.addressData.prefixAddress = this.addressData.province+this.addressData.city+this.addressData.region;
 				});
 			}
 			this.manageType = option.type;
@@ -106,8 +112,13 @@
 					this.$api.msg('请输入正确的手机号码');
 					return;
 				}
+				if (!data.prefixAddress) {
+					this.$api.msg('请输入区域');
+					return;
+				}
+				this.covertAdderss(data.prefixAddress);
 				if (!data.province) {
-					this.$api.msg('请在地图选择所在位置');
+					this.$api.msg('请输入正确的省份');
 					return;
 				}
 				if (!data.detailAddress) {

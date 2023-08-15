@@ -260,7 +260,7 @@
 				if(this.memberReceiveAddressList!=null&&this.memberReceiveAddressList.length>0){
 					return this.memberReceiveAddressList[0];
 				}
-				return null;
+				return {};
 			},
 			selectCoupon(coupon) {
 				this.currCoupon = coupon;

@@ -74,3 +74,11 @@ export function deleteUserOrder(data) {
 		data: data
 	})
 }
+
+export function fetchAliapyStatus(params) {
+	return request({
+		method: 'GET',
+		url: '/alipay/query',
+		params: params
+	})
+}

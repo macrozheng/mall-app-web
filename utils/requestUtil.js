@@ -1,9 +1,10 @@
 import Request from '@/js_sdk/luch-request/request.js'
+import { API_BASE_URL} from '@/utils/appConfig.js';
 
 const http = new Request()
 
 http.setConfig((config) => { /* 设置全局配置 */
-	config.baseUrl = 'http://localhost:8085' /* 根域名不同 */
+	config.baseUrl = API_BASE_URL /* 根域名不同 */
 	config.header = {
 		...config.header
 	}

@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<text class="success-icon yticon icon-xuanzhong2"></text>
-		<text class="tit">支付成功</text>
+		<text class="tit">{{payText}}</text>
 		
 		<view class="btn-group">
 			<navigator url="/pages/order/order?state=0" open-type="redirect" class="mix-btn">查看订单</navigator>
@@ -11,11 +11,33 @@
 </template>
 
 <script>
+	import {
+		fetchAliapyStatus
+	} from '@/api/order.js';
+	import { USE_ALIPAY } from '@/utils/appConfig.js';
 	export default {
 		data() {
 			return {
-				
+				payText: '',
+				tradeStatus: null
 			}
+		},
+		onLoad(options) {
+			if(!USE_ALIPAY){
+				this.payText = '支付成功';
+				return;
+			}
+			let outTradeNo = options.out_trade_no;
+			console.log(options.out_trade_no);
+			fetchAliapyStatus({outTradeNo:outTradeNo}).then(response => {
+				this.tradeStatus = response.data;
+				if(this.tradeStatus!=null&&'TRADE_SUCCESS'==this.tradeStatus){
+					this.payText = '支付成功';
+				}else{
+					this.payText = '支付失败';
+				}
+				console.log(this.tradeStatus);
+			});
 		},
 		methods: {
 			

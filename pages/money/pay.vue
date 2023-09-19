@@ -6,25 +6,24 @@
 		</view>
 
 		<view class="pay-type-list">
-
-			<view class="type-item b-b" @click="changePayType(2)">
-				<text class="icon yticon icon-weixinzhifu"></text>
-				<view class="con">
-					<text class="tit">微信支付</text>
-					<text>推荐使用微信支付</text>
-				</view>
-				<label class="radio">
-					<radio value="" color="#fa436a" :checked='payType == 2' />
-					</radio>
-				</label>
-			</view>
 			<view class="type-item b-b" @click="changePayType(1)">
 				<text class="icon yticon icon-alipay"></text>
 				<view class="con">
 					<text class="tit">支付宝支付</text>
+					<text>推荐使用支付宝支付</text>
 				</view>
 				<label class="radio">
 					<radio value="" color="#fa436a" :checked='payType == 1' />
+					</radio>
+				</label>
+			</view>
+			<view class="type-item b-b" @click="changePayType(2)">
+				<text class="icon yticon icon-weixinzhifu"></text>
+				<view class="con">
+					<text class="tit">微信支付</text>
+				</view>
+				<label class="radio">
+					<radio value="" color="#fa436a" :checked='payType == 2' />
 					</radio>
 				</label>
 			</view>
@@ -39,11 +38,12 @@
 		fetchOrderDetail,
 		payOrderSuccess
 	} from '@/api/order.js';
+	import { API_BASE_URL, USE_ALIPAY } from '@/utils/appConfig.js';
 	export default {
 		data() {
 			return {
 				orderId: null,
-				payType: 2,
+				payType: 1,
 				orderInfo: {}
 			};
 		},
@@ -60,14 +60,26 @@
 			},
 			//确认支付
 			confirm: async function() {
-				payOrderSuccess({
-					orderId: this.orderId,
-					payType: this.payType
-				}).then(response => {
-					uni.redirectTo({
-						url: '/pages/money/paySuccess'
-					})
-				});
+				if(USE_ALIPAY){
+					if(this.payType!=1){
+						uni.showToast({
+							title:"暂不支持微信支付！",
+							icon:"none"
+						})
+						return;
+					}
+					window.location.href = API_BASE_URL+"/alipay/webPay?outTradeNo=" + this.orderInfo.orderSn + "&subject=" + this.orderInfo.receiverName + "的商品订单" + "&totalAmount=" + this.orderInfo.totalAmount
+				}else{
+					payOrderSuccess({
+						orderId: this.orderId,
+						payType: this.payType
+					}).then(response => {
+						uni.redirectTo({
+							url: '/pages/money/paySuccess'
+						})
+					});
+				}
+
 			},
 		}
 	}

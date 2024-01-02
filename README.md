@@ -92,4 +92,4 @@ src -- 源码目录
 
 [Apache License 2.0](https://github.com/macrozheng/mall-app-web/blob/master/LICENSE)
 
-Copyright (c) 2020-2023 macrozheng
+Copyright (c) 2020-2024 macrozheng

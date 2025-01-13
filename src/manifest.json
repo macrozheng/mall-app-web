@@ -68,7 +68,7 @@
         },
         "domain" : "localhost",
         "router" : {
-            "base" : ""
+            "base" : "/app/"
         }
     }
 }

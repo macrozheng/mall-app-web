@@ -21,15 +21,15 @@
 
 ### 效果展示
 
-![](http://img.macrozheng.com/mall/project/mall_app_web_preview_01.png)![](http://img.macrozheng.com/mall/project/mall_app_web_preview_02.png)
+![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_01.png)![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_02.png)
 
-![](http://img.macrozheng.com/mall/project/mall_app_web_preview_03.png)![](http://img.macrozheng.com/mall/project/mall_app_web_preview_04.png)
+![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_03.png)![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_04.png)
 
-![](http://img.macrozheng.com/mall/project/mall_app_web_preview_05.png)![](http://img.macrozheng.com/mall/project/mall_app_web_preview_06.png)
+![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_05.png)![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_06.png)
 
-![](http://img.macrozheng.com/mall/project/mall_app_web_preview_07.png)![](http://img.macrozheng.com/mall/project/mall_app_web_preview_08.png)
+![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_07.png)![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_08.png)
 
-![](http://img.macrozheng.com/mall/project/mall_app_web_preview_09.png)![](http://img.macrozheng.com/mall/project/mall_app_web_preview_10.png)
+![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_09.png)![](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/project/mall_app_web_preview_10.png)
 
 
 

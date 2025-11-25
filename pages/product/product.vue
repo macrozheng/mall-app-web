@@ -577,6 +577,12 @@
 			},
 			//初始化商品详情信息
 			initProductDesc() {
+				// #ifdef MP
+				// 小程序环境无法使用document对象，可以直接通过CSS控制样式
+				this.desc = this.product.detailMobileHtml;
+				// #endif
+				
+				// #ifdef H5
 				let rawhtml = this.product.detailMobileHtml;
 				let tempNode = document.createElement('div');
 				tempNode.innerHTML = rawhtml;
@@ -587,6 +593,7 @@
 					imgs[i].style.display = 'block';
 				}
 				this.desc = tempNode.innerHTML;
+				// #endif
 			},
 			//处理创建浏览记录
 			handleReadHistory() {
@@ -1026,7 +1033,7 @@
 		}
 	}
 
-	.detail-desc>>>img {
+	.detail-desc /deep/ img {
 		width: 100%;
 		height: auto;
 	}

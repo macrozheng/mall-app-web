@@ -1,0 +1,23 @@
+# 依赖目录
+node_modules
+
+# 构建输出目录
+dist
+unpackage
+
+# 锁文件
+package-lock.json
+
+# 日志文件
+*.log
+
+# 编辑器配置
+.vscode
+.idea
+
+# 截图文件
+screenshot
+
+# 系统文件
+.DS_Store
+Thumbs.db

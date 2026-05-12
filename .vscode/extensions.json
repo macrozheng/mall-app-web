@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    // Prettier 代码格式化工具
+    "esbenp.prettier-vscode",
+    // ESLint 代码检查工具
+    "dbaeumer.vscode-eslint",
+    // Vue 语言支持
+    "vue.volar"
+  ]
+}
